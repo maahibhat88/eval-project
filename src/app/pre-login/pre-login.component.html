@@ -1,0 +1,125 @@
+<app-header></app-header>
+
+<div class="container-fluid">
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide>
+        <div class="wrapper">
+          <img [src]="images[0]" alt="Random first slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>Photography is a talent</h3>
+          <p> Photography means to capture the moments which we always want to cherish </p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="wrapper">
+          <img [src]="images[1]" alt="Random second slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>Once a life set is not always set</h3>
+          <p> Life gives us both ups and downs </p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="wrapper">
+          <img [src]="images[2]"  alt="Random third slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>Hardwork pays back</h3>
+          <p> Hardwork is the key to success </p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+</div>
+
+<div class="container">
+    <h1 class="bg-light mt-5 text-center">Our Packages</h1>
+    <div class="card-deck mb-3 text-center">
+      <div class="card mb-4 box-shadow">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Free</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">₹0 <small class="text-muted">/ mo</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>5 images/day</li>
+            <li>250 MB of storage</li>
+            <li>Email support</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+        </div>
+      </div>
+      <div class="card mb-4 box-shadow">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Pro</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">₹250 <small class="text-muted">/ mo</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>500 images/day</li>
+            <li>5 GB of storage</li>
+            <li>Priority email support</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+        </div>
+      </div>
+      <div class="card mb-4 box-shadow">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Enterprise</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">₹500 <small class="text-muted">/ mo</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Unlimited images</li>
+            <li>15 GB of storage</li>
+            <li>Phone and email support</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-4 my-md-5 pt-md-5 border-top">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img class="mb-2" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+          <small class="d-block mb-3 text-muted">©2021</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Cool stuff</a></li>
+            <li><a class="text-muted" href="#">Random feature</a></li>
+            <li><a class="text-muted" href="#">Team feature</a></li>
+            <li><a class="text-muted" href="#">Stuff for developers</a></li>
+            <li><a class="text-muted" href="#">Another one</a></li>
+            <li><a class="text-muted" href="#">Last time</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Resource</a></li>
+            <li><a class="text-muted" href="#">Resource name</a></li>
+            <li><a class="text-muted" href="#">Another resource</a></li>
+            <li><a class="text-muted" href="#">Final resource</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Team</a></li>
+            <li><a class="text-muted" href="#">Locations</a></li>
+            <li><a class="text-muted" href="#">Privacy</a></li>
+            <li><a class="text-muted" href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+<app-footer></app-footer>

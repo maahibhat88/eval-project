@@ -1,0 +1,10 @@
+img{
+    padding:15px;
+    object-fit: contain;
+    transition: padding 250ms;
+}
+
+img:hover{
+    padding: 10px;
+    
+}

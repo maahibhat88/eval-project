@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+  <div class="container"><a class="navbar-brand d-flex align-items-center"> <fa-icon [icon]="faInstagramSquare"></fa-icon> <strong>Photo Artitians</strong></a>
+    <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+    <div id="navbarSupportedContent" class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto" *ngIf="!isPrivateUser">
+        <li class="nav-item active"> <a [routerLink]="['/']"  class="nav-link font-italic"> Home </a></li>
+        <li class="nav-item active"> <a [routerLink]="['/about']"  class="nav-link font-italic"> About </a></li>
+        <li class="nav-item active"> <a (click)="open(content)" class="nav-link font-italic"> Login</a></li>
+      </ul>
+      <ul class="navbar-nav ml-auto" *ngIf="isPrivateUser">
+        <li class="nav-item active"> <a [routerLink]="['/gallery']"  class="nav-link font-italic"> Gallery </a></li>
+        <li class="nav-item active"> <a [routerLink]="['/about']"  class="nav-link font-italic"> About </a></li>
+        <li class="nav-item active"> <a (click)="onLogout()" class="nav-link font-italic"> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<ng-template #content let-modal>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Log In</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+          <label for="userId">UserName</label>
+          <div class="input-group">
+            <input type="text" id="userId" class="form-control" placeholder="Username"  formControlName="username" required>
+          </div>
+          <span class="error" *ngIf="isFieldInvalid('username')">
+            Please enter valid username
+        </span>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-group">
+            <input type="password" id="password" class="form-control" placeholder="Password" formControlName="password" required>
+          </div>
+          <span class="error" *ngIf="isFieldInvalid('password')">
+            Please enter valid password
+        </span>
+        </div>
+        <span class="error" *ngIf="wrongCreds">
+          Please enter valid credentials.
+      </span>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-lg btn-primary">Login</button>
+    </div>
+  </form>
+</ng-template>
+  
